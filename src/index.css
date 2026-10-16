@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tesla-red: #e31937;
+  --color-tesla-red-dark: #b8142c;
+  --color-tesla-dark: #0a0a0a;
+  --color-tesla-charcoal: #141414;
+  --color-tesla-gray: #1a1a1a;
+  --color-tesla-light-gray: #2a2a2a;
+  --color-tesla-text: #e5e5e5;
+  --color-tesla-muted: #999999;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-tesla-dark);
+    color: var(--color-tesla-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-tesla-red);
+    color: white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(227, 25, 55, 0.3), transparent, rgba(227, 25, 55, 0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .hero-gradient {
+    background: radial-gradient(ellipse at 50% 0%, rgba(227, 25, 55, 0.08) 0%, transparent 60%),
+                linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
+  }
+
+  .section-gradient {
+    background: linear-gradient(180deg, #141414 0%, #0a0a0a 50%, #141414 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #999999 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-primary {
+    background: var(--color-tesla-red);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-primary:hover {
+    background: var(--color-tesla-red-dark);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .spec-card {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .spec-card:hover {
+    border-color: rgba(227, 25, 55, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--color-tesla-red), transparent);
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 768px) {
+    .timeline-line {
+      left: 20px;
+    }
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
