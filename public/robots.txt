@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tesla-flying-roadster-demo.example.com/sitemap.xml
+
+# This is an independent informational website.
+# Not affiliated with or endorsed by Tesla, Inc.
