@@ -27,6 +27,34 @@ export default function PricingSection() {
           </motion.p>
         </div>
 
+        {/* Pricing Visual */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 rounded-xl overflow-hidden relative aspect-[21/9]"
+        >
+          <img
+            src="https://image.qwenlm.ai/generated-images/e9a2f75d-2492-46ef-9905-ece726c35961/_result.png"
+            alt="Illustrative concept of the Tesla Roadster — final retail pricing not yet announced"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/95 via-[#0a0a0a]/60 to-[#0a0a0a]/95" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-6">
+              <p className="text-[#e31937] text-xs font-mono uppercase tracking-widest mb-2">Final Retail Price</p>
+              <p className="text-white text-3xl sm:text-4xl font-bold">Not Announced</p>
+              <p className="text-[#999] text-sm mt-2 max-w-md mx-auto">
+                Reservation deposits of $50,000 and $250,000 are NOT purchase prices
+              </p>
+            </div>
+          </div>
+          <span className="absolute bottom-3 right-3 text-[9px] text-[#555] italic bg-black/40 px-2 py-1 rounded">
+            Illustrative concept — not actual vehicle
+          </span>
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Left: US Pricing */}
           <div className="space-y-6">

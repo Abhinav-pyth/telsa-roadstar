@@ -33,6 +33,37 @@ export default function DemoTimeline() {
           </motion.p>
         </div>
 
+        {/* Demonstration Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 rounded-xl overflow-hidden relative"
+        >
+          <div className="aspect-[16/9] relative">
+            <img
+              src="https://image.qwenlm.ai/generated-images/fdff5554-9b45-4733-9516-978c78d36f3f/_result.png"
+              alt="Illustrative concept render showing a sports car performing a brief thruster-assisted aerial maneuver — not actual demonstration footage"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+              <div>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-black/60 backdrop-blur-sm text-[10px] text-white font-medium mb-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#e31937] animate-pulse" />
+                  October 15, 2026 Demonstration
+                </span>
+                <h3 className="text-white font-bold text-lg">Brief Aerial Maneuver Demonstration</h3>
+                <p className="text-[#999] text-xs mt-1">Cold-gas thrusters enabled momentary lift and rotation</p>
+              </div>
+              <span className="text-[9px] text-[#555] italic bg-black/40 px-2 py-1 rounded">
+                Illustrative concept — not actual footage
+              </span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Important Distinction */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

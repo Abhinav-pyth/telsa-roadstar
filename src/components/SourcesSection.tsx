@@ -28,6 +28,28 @@ export default function SourcesSection() {
           </motion.p>
         </div>
 
+        {/* Sources Visual */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 rounded-xl overflow-hidden relative aspect-[3/1]"
+        >
+          <img
+            src="https://image.qwenlm.ai/generated-images/a365a9e8-8a84-4aea-b5bc-ce8a32485e9b/_result.png"
+            alt="Abstract visualization representing verified sources and fact-checking network"
+            className="w-full h-full object-cover opacity-60"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/80 via-transparent to-[#0a0a0a]/80" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <p className="text-white text-xl sm:text-2xl font-bold">Every Claim Sourced</p>
+              <p className="text-[#999] text-sm mt-1">Official company sources + independent media reporting</p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Source Cards */}
         <div className="grid md:grid-cols-2 gap-4">
           {sources.map((source, index) => (

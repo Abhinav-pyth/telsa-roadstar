@@ -35,6 +35,34 @@ export default function ProductionTimeline() {
           </motion.p>
         </div>
 
+        {/* Production Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 rounded-xl overflow-hidden relative aspect-[21/9]"
+        >
+          <img
+            src="https://image.qwenlm.ai/generated-images/11c5abe3-8b32-48fb-a4dd-6c971b6e4051/_result.png"
+            alt="Illustrative concept of advanced automotive manufacturing — not actual Tesla factory photograph"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/80 via-transparent to-[#0a0a0a]/80" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-6">
+              <p className="text-[#e31937] text-xs font-mono uppercase tracking-widest mb-2">Production Target</p>
+              <p className="text-white text-3xl sm:text-4xl font-bold">2028</p>
+              <p className="text-[#999] text-sm mt-2 max-w-md mx-auto">
+                Target date for customer deliveries — subject to change based on production readiness
+              </p>
+            </div>
+          </div>
+          <span className="absolute bottom-3 right-3 text-[9px] text-[#555] italic bg-black/40 px-2 py-1 rounded">
+            Illustrative concept — not actual factory
+          </span>
+        </motion.div>
+
         {/* Horizontal Timeline (Desktop) */}
         <div className="hidden md:block">
           <div className="relative">
