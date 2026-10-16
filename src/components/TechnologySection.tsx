@@ -38,6 +38,57 @@ export default function TechnologySection() {
           </motion.p>
         </div>
 
+        {/* Technology Image Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 grid md:grid-cols-3 gap-4"
+        >
+          <div className="rounded-xl overflow-hidden relative aspect-[3/2]">
+            <img
+              src="https://image.qwenlm.ai/generated-images/eb71cea7-d3a0-43c3-b6c9-12a01ed800fc/_result.png"
+              alt="Illustrative concept render of cold-gas thruster nozzles expelling compressed gas — not actual hardware photograph"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 to-transparent" />
+            <div className="absolute bottom-3 left-3">
+              <span className="text-[10px] text-white/80 bg-black/50 backdrop-blur-sm px-2 py-1 rounded">
+                Cold-gas thruster concept
+              </span>
+            </div>
+          </div>
+          <div className="rounded-xl overflow-hidden relative aspect-[3/2]">
+            <img
+              src="https://image.qwenlm.ai/generated-images/5e8be3e3-5262-4dbd-805b-e250203d37ae/_result.png"
+              alt="Illustrative concept render of active aerodynamics with airflow visualization — not actual engineering diagram"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 to-transparent" />
+            <div className="absolute bottom-3 left-3">
+              <span className="text-[10px] text-white/80 bg-black/50 backdrop-blur-sm px-2 py-1 rounded">
+                Active aerodynamics concept
+              </span>
+            </div>
+          </div>
+          <div className="rounded-xl overflow-hidden relative aspect-[3/2]">
+            <img
+              src="https://image.qwenlm.ai/generated-images/96ee5932-abf2-4b86-bad7-e34879ce54cb/_result.png"
+              alt="Illustrative concept render of multi-mode suction system with airflow visualization — not actual engineering diagram"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 to-transparent" />
+            <div className="absolute bottom-3 left-3">
+              <span className="text-[10px] text-white/80 bg-black/50 backdrop-blur-sm px-2 py-1 rounded">
+                Multi-mode suction concept
+              </span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Technology Cards */}
         <div className="grid md:grid-cols-2 gap-6">
           {technologies.map((tech, index) => {

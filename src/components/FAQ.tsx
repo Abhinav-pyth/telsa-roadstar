@@ -30,6 +30,28 @@ export default function FAQ() {
           </motion.p>
         </div>
 
+        {/* FAQ Visual */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 rounded-xl overflow-hidden relative aspect-[3/1]"
+        >
+          <img
+            src="https://image.qwenlm.ai/generated-images/21fff757-3ecd-4d0b-b4e9-a3be4d7340dc/_result.png"
+            alt="Abstract visualization representing questions and answers"
+            className="w-full h-full object-cover opacity-40"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-transparent to-[#0a0a0a]/80" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <p className="text-white text-xl sm:text-2xl font-bold">Common Questions</p>
+              <p className="text-[#999] text-sm mt-1">Answers based on sourced information</p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* FAQ Items */}
         <div className="space-y-3">
           {faqItems.map((item, index) => {

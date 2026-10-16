@@ -34,6 +34,46 @@ export default function VariantComparison() {
           </motion.p>
         </div>
 
+        {/* Variant Image Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 rounded-xl overflow-hidden relative"
+        >
+          <div className="aspect-[2/1] relative">
+            <img
+              src="https://image.qwenlm.ai/generated-images/b958b2e1-47af-49f9-95b7-7cadebfac327/_result.png"
+              alt="Illustrative concept render showing three vehicle configurations side by side — not actual product photography"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/30 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center">
+                  <div className="w-3 h-3 rounded-full bg-blue-400 mx-auto mb-2" />
+                  <p className="text-white font-semibold text-sm">Performance</p>
+                  <p className="text-[#999] text-xs">Road-Ready</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-3 h-3 rounded-full bg-[#e31937] mx-auto mb-2" />
+                  <p className="text-white font-semibold text-sm">Thrust</p>
+                  <p className="text-[#999] text-xs">Race-Ready</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-3 h-3 rounded-full bg-purple-400 mx-auto mb-2" />
+                  <p className="text-white font-semibold text-sm">Rocket</p>
+                  <p className="text-[#999] text-xs">Air-Ready</p>
+                </div>
+              </div>
+            </div>
+            <span className="absolute top-4 right-4 text-[9px] text-[#555] italic bg-black/40 px-2 py-1 rounded">
+              Illustrative concept — not actual product photography
+            </span>
+          </div>
+        </motion.div>
+
         {/* Variant Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {variants.map((variant, index) => {

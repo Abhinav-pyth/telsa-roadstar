@@ -36,16 +36,22 @@ export default function VideoGallery() {
           className="mb-10"
         >
           <div className="glass-card rounded-xl overflow-hidden">
-            <div className="aspect-video bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] flex items-center justify-center relative">
-              <div className="absolute inset-0 bg-[#e31937]/5" />
+            <div className="aspect-video flex items-center justify-center relative">
+              <img
+                src="https://image.qwenlm.ai/generated-images/fdff5554-9b45-4733-9516-978c78d36f3f/_result.png"
+                alt="Illustrative concept of the Roadster demonstration — visit Tesla official for actual footage"
+                className="absolute inset-0 w-full h-full object-cover opacity-40"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a]/80 via-[#0a0a0a]/60 to-[#0a0a0a]/80" />
               <div className="relative text-center px-6">
-                <div className="w-16 h-16 rounded-full bg-[#e31937]/20 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-[#e31937]/20 flex items-center justify-center mx-auto mb-4 backdrop-blur-sm border border-[#e31937]/30">
                   <Play size={28} className="text-[#e31937] ml-1" />
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">
                   Tesla Roadster Official Reveal — October 2026
                 </h3>
-                <p className="text-[#999] text-sm mb-4 max-w-md mx-auto">
+                <p className="text-[#ccc] text-sm mb-4 max-w-md mx-auto">
                   Visit Tesla's official website for authorized footage of the demonstration and vehicle reveal.
                 </p>
                 <a
@@ -63,6 +69,9 @@ export default function VideoGallery() {
                 <div className="w-2 h-2 rounded-full bg-[#e31937] animate-pulse" />
                 <span className="text-xs text-white font-medium">Official Source</span>
               </div>
+              <span className="absolute bottom-4 right-4 text-[9px] text-[#555] italic bg-black/40 px-2 py-1 rounded">
+                Illustrative background — not actual footage
+              </span>
             </div>
             <div className="p-4 flex items-center justify-between border-t border-white/5">
               <div className="flex items-center gap-4">

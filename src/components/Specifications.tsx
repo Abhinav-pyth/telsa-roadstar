@@ -39,6 +39,32 @@ export default function Specifications() {
           </motion.p>
         </div>
 
+        {/* Visual Element */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 rounded-xl overflow-hidden relative aspect-[21/9]"
+        >
+          <img
+            src="https://image.qwenlm.ai/generated-images/e9a2f75d-2492-46ef-9905-ece726c35961/_result.png"
+            alt="Illustrative concept render of a futuristic electric sports car — specifications shown are reported figures, not verified measurements"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/90 via-[#0a0a0a]/40 to-[#0a0a0a]/90" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <p className="text-[#e31937] text-xs font-mono uppercase tracking-widest mb-2">Reported Specifications</p>
+              <p className="text-white text-2xl sm:text-3xl font-bold">&lt; 1s 0-60 mph</p>
+              <p className="text-[#999] text-sm mt-1">Claimed for enhanced configuration</p>
+            </div>
+          </div>
+          <span className="absolute bottom-3 right-3 text-[9px] text-[#555] italic bg-black/40 px-2 py-1 rounded">
+            Illustrative concept — not actual vehicle
+          </span>
+        </motion.div>
+
         {/* Spec Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {specifications.map((spec, index) => {
